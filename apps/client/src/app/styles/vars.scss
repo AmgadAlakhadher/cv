@@ -95,7 +95,8 @@ html[data-theme="dark"] {
   --dark-grey: #{$dark-grey};
   --light-grey: #{$light-grey};
   --gradient: #{$gradient};
-  --overlay: #{$overlay}
+  --overlay: #{$overlay};
+  --background-header: #{$black};
 
 }
 
@@ -111,7 +112,9 @@ html[data-theme="light"] {
   --dark-grey: #{$dark-grey};
   --gradient: #{$gradient};
   --light-grey: #{$light-grey};
-  --overlay: #{$overlay}
+  --overlay: #{$overlay};
+  --background-header: #{$add-white};
+
 }
 
 

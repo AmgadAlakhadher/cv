@@ -1,11 +1,11 @@
 
 .toggle_container {
-  width: 251px;
-  padding: 14px;
+  width: 130px;
+  padding: 14px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: .2rem;
   background-color: var(--background-color-2);
   border-radius: 6px;
   transition: background-color 0.3s ease-in-out 0.1s;
