@@ -39,9 +39,9 @@ const Header = () => {
         <Link to="/" className={cls.header__container__logo}>developer</Link>
         <nav className={cls.header__container__nav } ref={navRef} onBlur={barsIcon}>
           <div className={cls.header__container__close_icon}><AiOutlineClose onClick={barsIcon} /></div>
-          <NavLink to="/" className={cls.header__container__nav__item}>home</NavLink>
-          <NavLink to="/" className={cls.header__container__nav__item}>about</NavLink>
-          <NavLink to="/yes" className={cls.header__container__nav__item}>contact</NavLink>
+          <a href="/" className={`${cls.header__container__nav__item} ${cls.active}`}>home</a>
+          <a href="/" className={cls.header__container__nav__item}>about</a>
+          <a href="/yes" className={cls.header__container__nav__item}>contact</a>
         </nav>
         <div className={cls.header__container__content}>
             <div className={cls.header__container__content__info}>
