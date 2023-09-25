@@ -9,19 +9,10 @@ import {
 import { AxiosInstance } from 'axios';
 import { createReducerManager } from './reducerManager';
 import { rtkApi } from 'shared/api/rtkApi';
-import { SessionSchema } from 'entites/Session';
-import { RequestSchema } from 'entites/Request/';
-// import { AllRequestsSchema } from 'entites/AllRequests/';
-import { CustomerSchema } from 'entites/Customer';
-import { ProductSchema } from 'entites/Product';
 import { OptionalRecord } from 'app/types/global';
-import { DarkModeSchema } from 'entites/DarkMode';
+import { DarkModeSchema } from 'entities/DarkMode';
 
 export interface StateSchema {
-  session: SessionSchema;
-  request: RequestSchema;
-  customer: CustomerSchema;
-  product:ProductSchema;
   darkMode: DarkModeSchema;
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 }

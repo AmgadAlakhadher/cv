@@ -81,6 +81,7 @@ $red: #D51E4A;
 $green: #146626;
 $skeleton-color: #E5E5E5;
 $skeleton-shadow: rgba(0 0 0 / 20%);
+$overlay: rgba(0, 0, 0, 0.5);
 // #303245
 html[data-theme="dark"] {
   --color-text: #{$white};
@@ -94,6 +95,8 @@ html[data-theme="dark"] {
   --dark-grey: #{$dark-grey};
   --light-grey: #{$light-grey};
   --gradient: #{$gradient};
+  --overlay: #{$overlay}
+
 }
 
 html[data-theme="light"] {
@@ -108,7 +111,7 @@ html[data-theme="light"] {
   --dark-grey: #{$dark-grey};
   --gradient: #{$gradient};
   --light-grey: #{$light-grey};
-
+  --overlay: #{$overlay}
 }
 
 

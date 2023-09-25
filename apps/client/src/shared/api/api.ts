@@ -1,14 +1,11 @@
 import axios from 'axios';
-import { getAccessToken } from 'entites/Session';
 
 
 
-let token = localStorage.getItem("token") || getAccessToken;
 const api = axios.create({
     baseURL: 'http://localhost:8080',
     headers: {
         Accept: 'application/json, text/plain, */*',
-        Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
     },
 });

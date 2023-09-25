@@ -7,17 +7,12 @@ import {
   ReducersMapObject,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import { NoInfer } from 'react-redux';
+import { darkModeReducer } from '../../../../entities/DarkMode'
 import { StateSchema, ThunkExtraArg, TStore } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 import { rtkApi } from 'shared/api/rtkApi';
 import { $api } from 'shared/api/api';
-import { requestReducer } from 'entites/Request';
-// import { allRequestsReducer } from 'entites/AllRequests'
-import { sessionReducer } from 'entites/Session/model/slice/sessionSlice';
-import { customerReducer } from 'entites/Customer'
-import { productReducer } from 'entites/Product';
-import { darkModeReducer } from 'entites/DarkMode';
+import { NoInfer } from '@reduxjs/toolkit/dist/tsHelpers';
 
 export function createReduxStore(
   initialState?: PreloadedState<CombinedState<NoInfer<StateSchema>>>,
@@ -25,10 +20,6 @@ export function createReduxStore(
 ) {
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
-    session: sessionReducer, 
-    request: requestReducer,
-    customer: customerReducer,
-    product: productReducer,
     darkMode: darkModeReducer,
     // last
     [rtkApi.reducerPath]: rtkApi.reducer,

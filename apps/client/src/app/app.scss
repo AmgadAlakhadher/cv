@@ -12,7 +12,9 @@ body{
   color: var(--color-text);
   overflow-x: hidden;
 }
-
+a{
+  text-decoration: none; 
+}
 //common style
 .container{
   width: 93%;

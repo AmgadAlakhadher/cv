@@ -1,8 +1,8 @@
+import React, { memo } from 'react'
 import './app.scss'
 import { AppRouter } from './providers/router'
-
-export function App() {
+export const App = memo(() => {
   return (
     <AppRouter />
   )
-}
+})
