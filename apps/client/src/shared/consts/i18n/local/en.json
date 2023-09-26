@@ -1,0 +1,22 @@
+{
+    "//": "//////////////////////////////////////header//////////////////////////////////////",
+    "logo": "developer",
+    "menu_home": "home",
+    "menu_about": "about",
+    "menu_contact": "contact",
+    "languages": "languages",
+    "english": "english",
+    "russian": "русский",
+    "message_change_language": "language changed",
+    "//": "/////////////////////////////////////hero section/////////////////////////////////////",
+    "hero_section_title":"web developer",
+    "hero_section_title_name":"amgad",
+    "hero_section_title_span":"hello, i'm",
+    "hero_section_desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi excepturi odit eaque sequi nemo labore, iure a ab. Incidunt accusamus voluptas architecto quae doloribus eligendi rerum repudiandae aliquam dolores eveniet!",
+    "hero_section_btn_hireme": "hire me",
+    "hero_section_btn_download": "download",
+    "hero_section_btn_download_cv": "cv",
+    "//": "/////////////////////////////////////about section/////////////////////////////////////",
+    "about_title": "about me",
+    "about_desc": "I am a full stack web developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Redux, Node.js, Express, Prisma, MySql, HTML, CSS, and Git. I am a quick learner and I am always looking to expand my knowledge and skill set. I am excited to work with others to create amazing applications."
+}

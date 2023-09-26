@@ -1,0 +1,37 @@
+.about {
+        padding: 120px 0;
+}
+.container{
+    width: 93%;
+    margin: 0 auto;
+}
+.about__content{
+    display: flex;
+    justify-content: space-between;
+}
+.about__content__left{
+   width: 50%;
+}
+.about__content__left__box_img{
+    width: 100%;
+}
+.about__content__right{
+   padding: 10px 20px;
+   width: 50%;
+}
+.about__content__right_title{
+    text-transform: capitalize;
+    font-size: 3rem;
+    color: var(--color-text);
+    padding-bottom: 20px;
+}
+.about__content__right_desc{
+    font-size: 1.3rem;
+    word-spacing: 4px;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+html[data-theme="dark"] .about__content__right_desc{
+    color: var(--add-white);
+
+}
