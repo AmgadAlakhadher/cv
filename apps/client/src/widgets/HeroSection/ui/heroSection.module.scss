@@ -1,7 +1,7 @@
 .section{
     height: calc(100vh - 180px);
     background: var(--black);
-    width: 100%;
+    width: 100% !important;
 }
 .container{
     padding: 7% 50px ;
