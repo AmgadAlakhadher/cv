@@ -13,6 +13,7 @@ const Header = () => {
   const navRef = useRef<HTMLElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const [t,i18n] = useTranslation();
+
   const barsIcon = () => {
     navRef.current?.classList.toggle(cls.active);
     overlayRef.current?.classList.toggle(cls.active);
@@ -42,11 +43,22 @@ const Header = () => {
     <header className={cls.header}>
       <div className={cls.header__container}>
         <Link to="/" className={cls.header__container__logo}>{t('logo')}</Link>
-        <nav className={cls.header__container__nav } ref={navRef} onBlur={barsIcon}>
+        <nav className={cls.header__container__nav } ref={navRef}>
           <div className={cls.header__container__close_icon}><AiOutlineClose onClick={barsIcon} /></div>
           <a href="/" className={`${cls.header__container__nav__item} ${cls.active}`}>{t('menu_home')}</a>
           <a href="/" className={cls.header__container__nav__item}>{t('menu_about')}</a>
           <a href="/yes" className={cls.header__container__nav__item}>{t('menu_contact')}</a>
+          <div className={cls.header__container__content__info__mobile}>
+              <Dropdown menu={contentDropdown}>
+                <Button>
+                  <Space>
+                    {t('languages')}
+                    <IoIosArrowDown />
+                  </Space>
+                </Button>
+              </Dropdown>
+              <ThemeIcon />
+            </div>
         </nav>
         <div className={cls.header__container__content}>
             <div className={cls.header__container__content__info}>

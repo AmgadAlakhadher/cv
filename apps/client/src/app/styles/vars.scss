@@ -66,6 +66,7 @@
 }
 
 $black: #252528;
+$dark-black: #000;
 $main-color: #00845B;
 $white: #FFFFFF;
 $gradient: radial-gradient(100% 100% at 50.36% 0%, #38B48D 0%, #007752 100%);
@@ -97,6 +98,7 @@ html[data-theme="dark"] {
   --gradient: #{$gradient};
   --overlay: #{$overlay};
   --background-header: #{$black};
+  --dark-black: #{$dark-black};
 
 }
 
@@ -114,6 +116,7 @@ html[data-theme="light"] {
   --light-grey: #{$light-grey};
   --overlay: #{$overlay};
   --background-header: #{$add-white};
+  --dark-black: #{$dark-black};
 
 }
 

@@ -6,26 +6,39 @@ import type { TabsProps } from 'antd';
 
 export const About = () => {
   const [t] = useTranslation();
+  const skills:string[] = ["HTML","CSS (BOOTSTRAP,SASS)","JavaScript","MYSQL",`PHP (${t('stepen_noop')})`,"React,Redux,Redux toolkit,TypeScript","Express","Nodejs",t('oop'),t('triks_coding')]
 
   const onChange = (key: string) => {
-    console.log(key);
+    // console.log(key);
   };
 
   const items: TabsProps['items'] = [
     {
       key: '1',
-      label: 'Tab 1',
-      children: 'Content of Tab Pane 1',
+      label: <p className={cls.tabs_title}>{t('about_skills')}</p>,
+      children: <ul className={cls.about__list}>
+        {
+            skills.map((item:string,index)=> {
+                return(
+                    <li key={index} className={cls.about__list_item}>{item}</li>
+                )
+            })
+        }
+      </ul>,
     },
     {
       key: '2',
-      label: 'Tab 2',
-      children: 'Content of Tab Pane 2',
+      label: <p className={cls.tabs_title}>{t('about_education')}</p>,
+      children: <p className={cls.about_education_desc}>{t('about_education_desc')}</p>,
     },
     {
       key: '3',
-      label: 'Tab 3',
-      children: 'Content of Tab Pane 3',
+      label: <p className={cls.tabs_title}>{t('languages')}</p>,
+      children: <ul className={cls.about__list}>
+            <li className={cls.about__list_item}>english</li>
+            <li className={cls.about__list_item}>russian</li>
+            <li className={cls.about__list_item}>arabic</li>
+         </ul>,
     },
   ];
 
@@ -54,7 +67,7 @@ export const About = () => {
                     {t('about_desc')}обо мне
                 </p>
                 <div className={cls.about__content__right}></div>
-                <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+                <Tabs defaultActiveKey="1" items={items} onChange={onChange} className={cls.about__content__right_tabs}/>
             </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ export const HeroSection = () => {
                 <p className={cls.section__content__left__desc}>
                   {t('hero_section_desc')}
                 </p>
-                <div className="btns">
+                <div className={cls.section__content__left__btns}>
                     <button className={`${cls.section__content__left__btn} ${cls.hireMe}`}>{t('hero_section_btn_hireme')}</button>
                     <button className={`${cls.section__content__left__btn} ${cls.download}`}>{t('hero_section_btn_download')}&nbsp;<span style={{textTransform: "capitalize"}}>{t('hero_section_btn_download_cv')}</span></button>
                 </div>

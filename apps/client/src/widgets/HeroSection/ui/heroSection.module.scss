@@ -1,6 +1,7 @@
 .section{
     height: calc(100vh - 180px);
     background: var(--black);
+    width: 100%;
 }
 .container{
     padding: 7% 50px ;
@@ -8,6 +9,7 @@
 .section__content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .section__content__left{
     margin: auto;
@@ -27,7 +29,7 @@
     padding: 20px 20px 20px 0;
     word-spacing: 4px;
     font-size: 1.1rem;
-
+    color: var(--light-grey);
 }
 .section__content__left__btn{
     border-radius: 25px;
@@ -54,7 +56,7 @@
     background: rgba($color: #fff, $alpha: .3);
 }
 
-.section__content__right{ }
+// .section__content__right{ }
 .section__content__right__box{
     width: 300px;
     height: 300px;
@@ -69,4 +71,60 @@
     width: 70%;
     line-height: 70%;
     border-radius: 50%;
+}
+@media (max-width: 1024px){
+    .section__content__left__title{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 830px){
+    .section{
+        height: calc(90vh - 180px);
+    }
+    .section__content__left__title{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 769px){
+    .section{
+        height: calc(100vh - 10vh);
+    }
+    .section__content{
+        flex-direction: column;
+    }
+    .section__content__left{
+        order: 2;
+    }
+    .section__content__left__title{
+        font-size: 2rem;
+    }
+    .section__content__left__btn.hireMe{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .section__content__left__btn.download{
+        width: 100%;
+    }
+    .section__content__right{
+        order: 1;
+    }
+    .section__content__right__box{
+        width: 200px;
+        height: 200px;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 490px){
+    .section{
+        height: 88vh ;
+    }
+    .section__content__left__title{
+        font-size: 2rem;
+    }
+    .section__content__right__box{
+        width: 150px;
+        height: 150px;
+    }
+   
 }

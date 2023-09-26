@@ -4,7 +4,7 @@
     "menu_home": "home",
     "menu_about": "обо мне",
     "menu_contact": "контакт",
-    "languages": "languages",
+    "languages": "языки",
     "english": "english",
     "russian": "русский",
     "message_change_language": "язык изменился",
@@ -17,5 +17,11 @@
     "hero_section_btn_download": "скачать",
     "hero_section_btn_download_cv": "резюме",
     "about_title": "обо мне",
-    "about_desc": "Я веб-разработчик полного цикла, страстно увлекающийся созданием интерактивных и адаптивных веб-приложений. У меня есть опыт работы с JavaScript, React, Redux, Node.js, Express, Prisma, MySql, HTML, CSS и Git. Я быстро учусь и всегда стремлюсь расширить свои знания и навыки. Я рад работать с другими над созданием потрясающих приложений."
+    "about_desc": "Я веб-разработчик full-stack, страстно увлекающийся созданием интерактивных и адаптивных веб-приложений. У меня есть опыт работы с JavaScript, React, Redux, Node.js, Express, Prisma, MySql, HTML, CSS и Git. Я быстро учусь и всегда стремлюсь расширить свои знания и навыки. Я рад работать с другими над созданием потрясающих приложений.",
+    "about_skills": "навыки",
+    "about_education": "образование",
+    "about_education_desc": "СГТУ: Бакалавр Программной инженерии и компьютерной техники, Программист",
+    "oop":"ООП",
+    "stepen_noop": "Базовый",
+    "triks_coding": "Основные знания программиравния"
 }

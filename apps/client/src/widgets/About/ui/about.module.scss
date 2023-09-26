@@ -1,5 +1,8 @@
 .about {
-        padding: 120px 0;
+    padding: 120px 0;
+}
+html[data-theme="dark"] .about {
+    background: var(--dark-black);
 }
 .container{
     width: 93%;
@@ -32,6 +35,18 @@
     color: var(--dark-grey);
 }
 html[data-theme="dark"] .about__content__right_desc{
-    color: var(--add-white);
+    color: var(--light-grey);
+}
+.about_education_desc{
+    color: var(--color-text);
+}
+.tabs_title{
+    color: var(--color-text);
+}
+.about__list{
+    padding-left: 15px;
 
+}
+.about__list_item{
+    color: var(--color-text);
 }
