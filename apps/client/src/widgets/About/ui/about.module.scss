@@ -5,23 +5,16 @@
 html[data-theme="dark"] .about {
     background: var(--dark-black);
 }
-.container{
-    width: 93%;
-    margin: 0 auto;
-}
-.about__content{
-    display: flex;
-    justify-content: space-between;
-}
-.about__content__left{
-   width: 50%;
+.about__content__left__box{
+    display: block;
+    margin: auto;
+    text-align: center;
 }
 .about__content__left__box_img{
     width: 100%;
 }
 .about__content__right{
-   padding: 10px 20px;
-   width: 50%;
+   padding: 0 20px;
 }
 .about__content__right_title{
     text-transform: capitalize;
@@ -46,15 +39,12 @@ html[data-theme="dark"] .about__content__right_desc{
 }
 .about__list{
     padding-left: 15px;
-
 }
 .about__list_item{
     color: var(--color-text);
 }
-
 @media (max-width: 1024px){
-    .about__content{
-        flex-direction: column;
-        align-items: center ;
+    .about__content__right{
+        padding-top: 20px;
     }
 }
