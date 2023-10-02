@@ -46,7 +46,7 @@ export const About = () => {
     <section className={cls.about}>
      <div className="container">
       <div className="row">
-        <div className="col-5 col-lg-5 col-md-12">
+        <div className="col-lg-5 col-md-12">
             <div className={cls.about__content__left__box}>
                 <Image
                     className={cls.about__content__left__box_img}
@@ -56,7 +56,7 @@ export const About = () => {
                     />
             </div>
         </div>
-        <div className="col-7 col-lg-7 col-md-12">
+        <div className="col-lg-7 col-md-12">
           <div className={cls.about__content__right}>
                 <h3 className={cls.about__content__right_title}>
                     {t('about_title')}
