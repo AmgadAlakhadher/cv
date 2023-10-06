@@ -1,5 +1,5 @@
 import cls from './projects.module.scss';
-import {GrView} from 'react-icons/gr';
+import {MdPreview} from 'react-icons/md';
 import {BsCodeSlash} from 'react-icons/bs';
 
 export const Projects = () => {
@@ -64,7 +64,7 @@ export const Projects = () => {
                                         <div className={cls.projects__item__content__box_overlay}>
                                             <div className={cls.projects__item__content__box_overlay_icons}>
                                                 <BsCodeSlash className={cls.icon} />
-                                                <GrView  className={cls.icon} style={{color: "#fff"}}/>
+                                                <MdPreview  className={cls.icon} />
                                             </div>
                                         </div>
                                     </div>

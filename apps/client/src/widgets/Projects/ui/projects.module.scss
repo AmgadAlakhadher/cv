@@ -5,7 +5,14 @@
     font-size: 5rem;
     text-align: center;
     text-transform: capitalize;
+    color: #DBB959;
+
 }
+html[data-theme="light"] .projects__title{
+    color: #FF6087;
+
+}
+
 .projects__items{
     //round: transparent;
 }
@@ -21,6 +28,7 @@
 }
 .projects__item__content__box{
     position: relative;
+    border-bottom: .5px solid #fff;
 }
 .projects__item__content__box_overlay{
     position: absolute;
@@ -33,6 +41,7 @@
     background: var(--overlay);
 }
 .projects__item__content__box_overlay_icons{
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -40,12 +49,16 @@
 }
 .projects__item__content__box_overlay_icons .icon{
     color: #fff;
-    border: #fff solid 2px;
+    border: var(--white) solid 1px;
     border-radius: 50%;
     font-size: 50px;
     padding: 10px;
     margin: 0 5px;
-
+    transition: border-color .5s ease-in-out;
+}
+.projects__item__content__box_overlay_icons .icon:hover{
+    border-color: var(--primary);
+    color: var(--primary);
 }
 .projects__item__content__box_img{
     border-top-left-radius: 20px;    
@@ -61,4 +74,9 @@
 .projects__item__content__info_title{
     text-transform: capitalize;
     padding: 5px 0;
+    color: #DBB959;
+
+}
+html[data-theme="light"] .projects__item__content__info_title{
+    color: #D8835A;
 }

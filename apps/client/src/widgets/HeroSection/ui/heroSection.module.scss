@@ -21,9 +21,17 @@
     height: 70%;
 }
 .section__content__left__title .span{
-    background: -webkit-linear-gradient(#dd5e89 , #f7bb97);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: -webkit-linear-gradient(#dd5e89 , #f7bb97);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+color: #DBB959;
+
+}
+html[data-theme="dark"] .section__content__left__title .span{
+//   background: -webkit-linear-gradient( #35F29A, #1D3739);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+color: #DBB959;
 }
 .section__content__left__desc{
     padding: 20px 20px 20px 0;
@@ -43,14 +51,23 @@
 }
 
 .section__content__left__btn.hireMe{
-    background: linear-gradient(#dd5e89,#f7bb97);
+    // background: linear-gradient(#dd5e89,#f7bb97);
     border: none;
+    background-color: #D8835A;
+}
+html[data-theme="dark"] .section__content__left__btn.hireMe{
+//   background: linear-gradient( #35F29A, #1D3739);
 }
 .section__content__left__btn.download{
     border-radius: 0;
-    border-image: linear-gradient(#dd5e89,#f7bb97) 4;
-    border-image-outset: 0;
+    border: solid 1px #D8835A;
+//     border-image: linear-gradient(#92BD67,#f7bb97) 4;
+//     border-image-outset: 0;
     background-color: transparent;
+}
+html[data-theme="dark"] .section__content__left__btn.download{
+  background-image: linear-gradient( #D8835A, #1D3739) 4;
+
 }
 .section__content__left__btn.download:hover{
     background: rgba($color: #fff, $alpha: .3);

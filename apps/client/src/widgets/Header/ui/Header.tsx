@@ -62,8 +62,8 @@ const Header = () => {
         </nav>
         <div className={cls.header__container__content}>
             <div className={cls.header__container__content__info}>
-              <Dropdown menu={contentDropdown}>
-                <Button>
+              <Dropdown menu={contentDropdown} className={cls.header__container__content__info_dropdown}>
+                <Button className={cls.header__container__content__info_btn}>
                   <Space>
                     {t('languages')}
                     <IoIosArrowDown />

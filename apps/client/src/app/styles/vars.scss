@@ -61,11 +61,9 @@
   --header-height: 8rem;
   --header-height768: 6rem;
 
-
-
 }
 
-$black: #252528;
+$black: #2C2A2D;
 $dark-black: #000;
 $main-color: #00845B;
 $white: #FFFFFF;
@@ -76,13 +74,19 @@ $grey: #B3B3B3;
 $light-grey: #D7D7D7;
 $add-white: #F9F9FB;
 $Yellow: #c8ab08;
-$primary: #F2C94C;
+$primary: #39DE93 ;
 $secondary: #303245;
 $red: #D51E4A;
 $green: #146626;
 $skeleton-color: #E5E5E5;
 $skeleton-shadow: rgba(0 0 0 / 20%);
 $overlay: rgba(0, 0, 0, 0.5);
+// #9488D0
+// #68BDC8
+// #92BD67
+// #DBB959
+// #D8835A
+// #DB5475
 // #303245
 html[data-theme="dark"] {
   --color-text: #{$white};
@@ -99,7 +103,6 @@ html[data-theme="dark"] {
   --overlay: #{$overlay};
   --background-header: #{$black};
   --dark-black: #{$dark-black};
-
 }
 
 html[data-theme="light"] {

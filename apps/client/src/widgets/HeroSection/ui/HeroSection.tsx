@@ -1,11 +1,11 @@
 import cls from './heroSection.module.scss';
-import img from 'shared/assest/images/[removal.ai]_bf9ce398-4529-4ba5-abfd-12d0d8326f17-bd771ed1a4f31322288c5d71b4439294.png'
+import img from 'shared/assest/images/photo_2023-10-06_11-50-27.jpg'
 import { TypeAnimation } from 'react-type-animation';
 import { useTranslation } from 'react-i18next';
-import {Image} from 'antd'
+import {Image} from 'antd';
 export const HeroSection = () => {
 
-  const [t,i18n] = useTranslation();
+  const [t] = useTranslation();
 
   return (
     <section className={cls.section}>
@@ -20,6 +20,8 @@ export const HeroSection = () => {
                         t('hero_section_title_name'),
                         1000, // wait 1s before replacing "Mice" with "Hamsters"
                         t('hero_section_title'),
+                        1000,
+                        t('hero_section_title_fullstack'),
                         1000,
                         ]}
                         wrapper="span"
