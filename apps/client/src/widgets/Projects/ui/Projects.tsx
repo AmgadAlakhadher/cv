@@ -2,9 +2,22 @@ import cls from './projects.module.scss';
 import {MdPreview} from 'react-icons/md';
 import {BsCodeSlash} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import ProjectTag from './ProjectTag';
+import { useState } from 'react';
+
+interface IProject {
+    id:string;
+    urlImg:string;
+    title:string;
+    desc:string;
+    tag:string[];
+    perviewUrl:string;
+    gitUrl:string;
+}
 
 export const Projects = () => {
-    const projects = [
+    const [tag,setTag] = useState<string>("all");
+    const projects:IProject[] = [
         {
             id: "4",
             urlImg: "https://i.postimg.cc/wTJ63zfv/images.png",
@@ -37,7 +50,7 @@ export const Projects = () => {
             urlImg: "https://i.postimg.cc/HLHWRdKh/home-bg.jpg",
             title: "laptop",
             desc: "description project",
-            tag: ["all","front"],
+            tag: ["all","front-end"],
             gitUrl: '/',
             perviewUrl: '/'
         },
@@ -59,7 +72,11 @@ export const Projects = () => {
             gitUrl: '/',
             perviewUrl: '/'
         },
-    ]
+    ];
+    const handleTag = (newTag:string) => setTag(newTag);
+    const filteredProjects = projects.filter((project:IProject) => {
+        if(project.tag.includes(tag)) return project;
+    });
   return (
     <section className={cls.projects}>
         <div className="myContainer">
@@ -67,13 +84,28 @@ export const Projects = () => {
                 projects
             </h3>
             <div className={cls.projects__btns}>
-                <button className={`${cls.projects__btns_btn} active pointer`}>all</button>
+                <ProjectTag 
+                    onClick={handleTag}
+                    name='all'
+                    isSelected={tag === "all"}
+                />
+                <ProjectTag 
+                    onClick={handleTag}
+                    name='front-end'
+                    isSelected={tag === "front-end"}
+                />
+                <ProjectTag 
+                    onClick={handleTag}
+                    name='full-stack'
+                    isSelected={tag === "full-stack"}
+                />
+                {/* <button className={`${cls.projects__btns_btn} active pointer`}>all</button>
                 <button className={`${cls.projects__btns_btn} pointer`}>front-end</button>
-                <button className={`${cls.projects__btns_btn} pointer`}>full-stack</button>
+                <button className={`${cls.projects__btns_btn} pointer`}>full-stack</button> */}
             </div>
             <div className={`${cls.projects__items} row`}>
                 {
-                    projects.length ? projects.map((item:{id:string,urlImg:string,title:string,desc:string,tag:string[],perviewUrl:string,gitUrl:string}) => {
+                    filteredProjects.length ? filteredProjects.map((item:IProject) => {
                         return (
                             <div key={item.id} className={`${cls.projects__item} col-lg-4 col-md-6 col-sm-12`}>
                                 <div className={cls.projects__item__content}>

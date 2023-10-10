@@ -23,14 +23,13 @@ html[data-theme="light"] .projects__title{
     font-size: 1.4rem;
     padding: 10px 16px;
     border: 2px solid #abaaaa;
-    transition: border-color .5s ease-out;
 }
 .projects__btns_btn:hover{
     color: var(--color-text) !important;
     border-color: var(--color-text) !important;
 }
-.projects__btns_btn.active{
-    border-color: #fff !important;
+.projects__btns_btn_active{
+    border-color: var(--primary) !important;
 }
 .projects__items{
     //round: transparent;

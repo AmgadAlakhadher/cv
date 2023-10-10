@@ -1,7 +1,7 @@
 import cls from './about.module.scss';
 import img from 'shared/assest/images/download.jpeg'
 import { useTranslation } from 'react-i18next';
-import {Image,Tabs} from 'antd';
+import {ConfigProvider, Image,Tabs} from 'antd';
 import type { TabsProps } from 'antd';
 
 export const About = () => {
@@ -65,7 +65,12 @@ export const About = () => {
                     {t('about_desc')}обо мне
                 </p>
                 <div className={cls.about__content__right}></div>
-                <Tabs defaultActiveKey="1" items={items} onChange={onChange} className={cls.about__content__right_tabs}/>
+                <Tabs 
+                  defaultActiveKey="1" 
+                  items={items} 
+                  onChange={onChange} 
+                  className={cls.about__content__right_tabs}
+                />
             </div>
         </div>
       </div>
