@@ -5,9 +5,11 @@
 html[data-theme="dark"] .about {
     background: var(--dark-black);
 }
+.about__content__left{
+    margin: auto !important;
+}
 .about__content__left__box{
     display: block;
-    margin: auto;
     text-align: center;
 }
 .about__content__left__box_img{

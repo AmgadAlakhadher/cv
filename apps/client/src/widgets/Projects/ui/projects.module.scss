@@ -10,9 +10,28 @@
 }
 html[data-theme="light"] .projects__title{
     color: #FF6087;
-
 }
-
+.projects__btns{
+    margin: 30px 0;
+    text-align: center;
+}
+.projects__btns_btn{
+    background-color: transparent;
+    color: var(--color-text);
+    margin: 0 5px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    padding: 10px 16px;
+    border: 2px solid #abaaaa;
+    transition: border-color .5s ease-out;
+}
+.projects__btns_btn:hover{
+    color: var(--color-text) !important;
+    border-color: var(--color-text) !important;
+}
+.projects__btns_btn.active{
+    border-color: #fff !important;
+}
 .projects__items{
     //round: transparent;
 }

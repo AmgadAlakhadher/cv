@@ -51,16 +51,16 @@ const Header = () => {
             <li><NavLink to="/yes" className={cls.header__container__nav__list_link}>{t('menu_contact')}</NavLink></li>
           </ul>
           <div className={cls.header__container__content__info__mobile}>
-              <Dropdown menu={contentDropdown}>
-                <Button>
-                  <Space>
-                    {t('languages')}
-                    <IoIosArrowDown />
-                  </Space>
-                </Button>
-              </Dropdown>
-              <ThemeIcon />
-            </div>
+            <Dropdown menu={contentDropdown}>
+              <Button>
+                <Space>
+                  {t('languages')}
+                  <IoIosArrowDown />
+                </Space>
+              </Button>
+            </Dropdown>
+            <ThemeIcon />
+          </div>
           <div className={cls.header__container__content}>
             <div className={cls.header__container__content__info}>
               <Dropdown menu={contentDropdown} className={cls.header__container__content__info_dropdown}>

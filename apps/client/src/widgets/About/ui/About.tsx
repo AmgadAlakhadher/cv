@@ -44,7 +44,7 @@ export const About = () => {
 
   return (
     <section className={cls.about}>
-     <div className="container">
+     <div className="myContainer">
       <div className="row">
         <div className="col-lg-5 col-md-12">
             <div className={cls.about__content__left__box}>
