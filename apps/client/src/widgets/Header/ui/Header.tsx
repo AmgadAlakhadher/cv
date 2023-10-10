@@ -3,7 +3,7 @@ import {FaBars} from 'react-icons/fa'
 import cls from './header.module.scss';
 import { AiOutlineClose } from 'react-icons/ai'
 import { IoIosArrowDown } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { ThemeIcon } from 'features/Theme';
 import { Dropdown, Button, Space, message } from 'antd';  
 import {useTranslation} from 'react-i18next';
@@ -44,10 +44,12 @@ const Header = () => {
       <div className={cls.header__container}>
         <Link to="/" className={cls.header__container__logo}>{t('logo')}</Link>
         <nav className={cls.header__container__nav } ref={navRef}>
-          <div className={cls.header__container__close_icon}><AiOutlineClose onClick={barsIcon} /></div>
-          <a href="/" className={`${cls.header__container__nav__item} ${cls.active}`}>{t('menu_home')}</a>
-          <a href="/" className={cls.header__container__nav__item}>{t('menu_about')}</a>
-          <a href="/yes" className={cls.header__container__nav__item}>{t('menu_contact')}</a>
+          <AiOutlineClose className={cls.header__container__close_icon} onClick={barsIcon} />
+          <ul className={cls.header__container__nav__list}>
+            <li><NavLink to="/" className={`${cls.header__container__nav__list_link} ${cls.active}`}>{t('menu_home')}</NavLink></li>
+            <li><NavLink to="/t" className={cls.header__container__nav__list_link}>{t('menu_about')}</NavLink></li>
+            <li><NavLink to="/yes" className={cls.header__container__nav__list_link}>{t('menu_contact')}</NavLink></li>
+          </ul>
           <div className={cls.header__container__content__info__mobile}>
               <Dropdown menu={contentDropdown}>
                 <Button>
@@ -59,8 +61,7 @@ const Header = () => {
               </Dropdown>
               <ThemeIcon />
             </div>
-        </nav>
-        <div className={cls.header__container__content}>
+          <div className={cls.header__container__content}>
             <div className={cls.header__container__content__info}>
               <Dropdown menu={contentDropdown} className={cls.header__container__content__info_dropdown}>
                 <Button className={cls.header__container__content__info_btn}>
@@ -72,8 +73,9 @@ const Header = () => {
               </Dropdown>
               <ThemeIcon />
             </div>
-          <div className={cls.header__container__content__bar_icon}><FaBars onClick={barsIcon}/></div>
           </div>
+        </nav>
+        <FaBars className={cls.header__container__content__bar_icon} onClick={barsIcon}/>
         <div className={cls.header__container__overlay} ref={overlayRef} onClick={barsIcon}></div>
       </div>
     </header>

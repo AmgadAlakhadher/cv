@@ -45,7 +45,7 @@ html[data-theme="dark"] .header__container__logo{
   // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
 }
-// html[data-theme="light"] .header__container__logo,html[data-theme="light"] .header__container__nav__item:hover ,html[data-theme="light"] .header__container__nav__item.active{
+// html[data-theme="light"] .header__container__logo,html[data-theme="light"] .header__container__nav__list_item:hover ,html[data-theme="light"] .header__container__nav__list_item.active{
 //   background: -webkit-linear-gradient(#7b4397 , #dc2430);
 //   -webkit-background-clip: text;
 //   -webkit-text-fill-color: transparent;
@@ -65,35 +65,34 @@ html[data-theme="dark"] .header__container__logo{
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-left: auto;
 }
-.header__container__nav__item {
+.header__container__nav__list{
+  margin-right: 30px;
+  list-style-type: none;
+}
+.header__container__nav__list li{
+  display: inline-block;
+}
+.header__container__nav__list_link {
+  display: block;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 10px 5px;
+  padding: 10px 16px;
   color: var(--color-text);
   text-transform: capitalize;
   transition: color .5s, transform .5s;
 }
-.header__container__nav__item:hover, .header__container__nav__item.active {
+.header__container__nav__list_link:hover, .header__container__nav__list_link.active {
   transform: scale(1.3);
-}
-.header__container__nav__item.active {
-  color: #92BD67;
-
-  // background:var();
-  // color: var(--white) !important;
-  // background-color: #7b4397;
-
-}
-html[data-theme="dark"] .header__container__nav__item:hover ,html[data-theme="dark"] .header__container__nav__item.active {
-  color: #92BD67;
-
+  color: #92BD67 !important;
 }
 .header__container__content__bar_icon, .header__container__close_icon {
   font-size: 1.5rem;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
+  margin-right: 10px;
 }
 .header__container__overlay {
   position: fixed;
@@ -130,6 +129,18 @@ html[data-theme="dark"] .header__container__nav__item:hover ,html[data-theme="da
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     z-index: 3;
     transition: right 0.5s;
+  }
+  .header__container__nav__list{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .header__container__nav__list li{
+    display: block;
+  }
+  .header__container__nav__list_link:hover, .header__container__nav__list_link.active{
+    transform: scale(1);
+    background-color: var(--skeleton);
   }
   html[data-theme="dark"] .header__container__nav {
     background: var(--black);
