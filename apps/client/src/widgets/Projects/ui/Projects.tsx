@@ -4,6 +4,7 @@ import {BsCodeSlash} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import ProjectTag from './ProjectTag';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface IProject {
     id:string;
@@ -17,6 +18,7 @@ interface IProject {
 
 export const Projects = () => {
     const [tag,setTag] = useState<string>("all");
+    const [t] = useTranslation(); 
     const projects:IProject[] = [
         {
             id: "4",
@@ -78,10 +80,10 @@ export const Projects = () => {
         if(project.tag.includes(tag)) return project;
     });
   return (
-    <section className={cls.projects}>
+    <section className={cls.projects} id='projects'>
         <div className="myContainer">
             <h3 className={cls.projects__title}>
-                projects
+                {t('menu_projects')}
             </h3>
             <div className={cls.projects__btns}>
                 <ProjectTag 

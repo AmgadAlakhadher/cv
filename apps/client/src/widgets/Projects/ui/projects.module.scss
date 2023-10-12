@@ -38,6 +38,7 @@ html[data-theme="light"] .projects__title{
     // padding: 5px;
     padding: 10px;
     // height: 300px;
+    overflow: hidden;
 }
 .projects__item__content{
     border-radius: 20px;    
@@ -46,17 +47,24 @@ html[data-theme="light"] .projects__title{
 }
 .projects__item__content__box{
     position: relative;
-    border-bottom: .5px solid #fff;
 }
 .projects__item__content__box_overlay{
     position: absolute;
     border-top-left-radius: 20px;    
     border-top-right-radius: 20px;   
     left: 0;
-    top: 0;
+    top: -100%;
     width: 100%;
     height: 100%;
     background: var(--overlay);
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s ease-out,opacity .3s ease-out;
+}
+.projects__item:hover .projects__item__content__box_overlay{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
 }
 .projects__item__content__box_overlay_icons{
     cursor: pointer;

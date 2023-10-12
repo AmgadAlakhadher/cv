@@ -8,7 +8,7 @@ export const HeroSection = () => {
   const [t] = useTranslation();
 
   return (
-    <section className={cls.section}>
+    <section className={cls.section} id='home'>
       <div className="myContainer">
         <div className={`${cls.section__content} row`}>
           <div className={`${cls.section__content__left} col-lg-8 col-md-12`}>

@@ -4,7 +4,7 @@ import { BsLinkedin } from 'react-icons/bs';
 import cls from './contact.module.scss';
 
 export const Contact = () => (
-    <section className={`${cls.contact}`}>
+    <section className={`${cls.contact}`} id='contact'>
         <div className="myContainer">
             <div className={`${cls.contact__content} row `}>
                 <div className={`${cls.contact__content__left} col-lg-6 col-sm-12 `}>
@@ -20,7 +20,7 @@ export const Contact = () => (
                             <BsLinkedin className={`${cls.contact__content__left__icons_icon}`} /></Link>
                     </div>
                 </div>
-                <form className={`${cls.contact__content__right} col-lg-6 col-sm-12 `}>
+                <form className={`${cls.contact__content__right} col-lg-6 col-sm-12`} id="contact">
                     <label htmlFor="email">your email</label>
                     <input type="email" name="" id="email" placeholder='example@gmail.com' />
                     <label htmlFor="subject">subject</label>

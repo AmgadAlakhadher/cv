@@ -43,7 +43,7 @@ export const About = () => {
   ];
 
   return (
-    <section className={cls.about}>
+    <section className={cls.about} id='about'>
      <div className="myContainer">
       <div className="row">
         <div className="col-lg-5 col-md-12">

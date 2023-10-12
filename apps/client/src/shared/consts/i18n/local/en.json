@@ -1,7 +1,7 @@
 {
     "//": "//////////////////////////////////////header//////////////////////////////////////",
     "logo": "developer",
-    "menu_home": "home",
+    "menu_projects": "projects",
     "menu_about": "about",
     "menu_contact": "contact",
     "languages": "languages",
@@ -26,6 +26,7 @@
     "about_certifications": "certifications",
     "oop":"OOP",
     "stepen_noop": "basics",
-    "triks_coding": "Basic programming knowledge"
-
+    "triks_coding": "Basic programming knowledge",
+    "//": "/////////////////////////////////////footer section/////////////////////////////////////",
+    "copyright": "all rights reserved."
 }
