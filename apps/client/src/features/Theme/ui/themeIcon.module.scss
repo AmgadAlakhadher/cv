@@ -110,12 +110,12 @@ input:checked + .slider:before {
 
 
 
-@keyframes circle-grow {
-  0% {
-    clip-path: circle(0% at 50% 0%);
-  }
+// @keyframes circle-grow {
+//   0% {
+//     clip-path: circle(0% at 50% 0%);
+//   }
   
-  100% {
-    clip-path: circle(150% at 50% 0%);
-  }
-}
+//   100% {
+//     clip-path: circle(150% at 50% 0%);
+//   }
+// }
