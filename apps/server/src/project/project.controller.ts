@@ -15,7 +15,7 @@ import { UpdateProjectDto } from './dto/update-project.dto';
 import { Public } from 'src/common/decorators';
 import { Roles } from 'src/common/decorators/role.decorator';
 
-@Controller('project')
+@Controller('projects')
 export class ProjectController {
   constructor(private readonly projectService: ProjectService) {}
 

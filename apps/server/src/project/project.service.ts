@@ -8,12 +8,16 @@ export class ProjectService {
   constructor(private prisma: PrismaService) {}
 
   async create(dto: CreateProjectDto) {
-    return dto;
-    // return await this.prisma.project.create({
-    //   data: {
-    //     ...dto,
-    //   },
-    // });
+    return await this.prisma.project.create({
+      data: {
+        title: dto.title,
+        desc: dto.desc,
+        gitUrl: dto.gitUrl,
+        previewUrl: dto.previewUrl,
+        urlImg: dto.urlImg,
+        // tags: dto.tags,
+      },
+    });
   }
 
   async findAll() {

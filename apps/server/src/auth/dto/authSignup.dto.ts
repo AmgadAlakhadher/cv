@@ -9,11 +9,7 @@ export class AuthSignup {
   email: string;
   @IsString()
   @IsNotEmpty()
-  phone: string;
-  @IsString()
-  @IsNotEmpty()
   password: string;
-  isActive?: boolean;
   @IsNotEmpty()
   @IsString()
   role: string;

@@ -3,82 +3,81 @@ import {MdPreview} from 'react-icons/md';
 import {BsCodeSlash} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import ProjectTag from './ProjectTag';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-interface IProject {
-    id:string;
-    urlImg:string;
-    title:string;
-    desc:string;
-    tag:string[];
-    perviewUrl:string;
-    gitUrl:string;
-}
+import { useAppDispatch } from 'shared/lib/hooks/AppDispatch/AppDispatch';
+import { IProject, getProjects, getProjectsReq } from '../../../entities/Projects';
+import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector';
 
 export const Projects = () => {
+    const dispatch = useAppDispatch();
     const [tag,setTag] = useState<string>("all");
     const [t] = useTranslation(); 
-    const projects:IProject[] = [
-        {
-            id: "4",
-            urlImg: "https://i.postimg.cc/wTJ63zfv/images.png",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-        {
-            id: "6",
-            urlImg: "https://i.postimg.cc/13zhZZq4/structure.png",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-        {
-            id: "5",
-            urlImg: "https://i.postimg.cc/Y26Khvtb/html-tagst.jpg",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-        {
-            id: "1",
-            urlImg: "https://i.postimg.cc/HLHWRdKh/home-bg.jpg",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front-end"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-        {
-            id: "2",
-            urlImg: "https://i.postimg.cc/KjCSZn5J/portfolio-img6.jpg",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-        {
-            id: "3",
-            urlImg: "https://i.postimg.cc/cCZwDpW7/portfolio-img1.jpg",
-            title: "laptop",
-            desc: "description project",
-            tag: ["all","front"],
-            gitUrl: '/',
-            perviewUrl: '/'
-        },
-    ];
+    const projects:IProject[] = useAppSelector(getProjects);
+    // const projects:IProject[] = [
+    //     {
+    //         id: "4",
+    //         urlImg: "https://i.postimg.cc/wTJ63zfv/images.png",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    //     {
+    //         id: "6",
+    //         urlImg: "https://i.postimg.cc/13zhZZq4/structure.png",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    //     {
+    //         id: "5",
+    //         urlImg: "https://i.postimg.cc/Y26Khvtb/html-tagst.jpg",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    //     {
+    //         id: "1",
+    //         urlImg: "https://i.postimg.cc/HLHWRdKh/home-bg.jpg",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front-end"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    //     {
+    //         id: "2",
+    //         urlImg: "https://i.postimg.cc/KjCSZn5J/portfolio-img6.jpg",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    //     {
+    //         id: "3",
+    //         urlImg: "https://i.postimg.cc/cCZwDpW7/portfolio-img1.jpg",
+    //         title: "laptop",
+    //         desc: "description project",
+    //         tag: ["all","front"],
+    //         gitUrl: '/',
+    //         perviewUrl: '/'
+    //     },
+    // ];
     const handleTag = (newTag:string) => setTag(newTag);
-    const filteredProjects = projects.filter((project:IProject) => {
-        if(project.tag.includes(tag)) return project;
-    });
+    // const filteredProjects = projects.filter((project:IProject) => {
+    //     if(project.tag.includes(tag)) return project;
+    // });
+
+    useEffect(()=> {
+        // dispatch(getProjectsReq());
+    })
   return (
     <section className={cls.projects} id='projects'>
         <div className="myContainer">
@@ -107,7 +106,7 @@ export const Projects = () => {
             </div>
             <div className={`${cls.projects__items} row`}>
                 {
-                    filteredProjects.length ? filteredProjects.map((item:IProject) => {
+                    projects.length ? projects.map((item:IProject) => {
                         return (
                             <div key={item.id} className={`${cls.projects__item} col-lg-4 col-md-6 col-sm-12`}>
                                 <div className={cls.projects__item__content}>
@@ -116,7 +115,7 @@ export const Projects = () => {
                                         <div className={cls.projects__item__content__box_overlay}>
                                             <div className={cls.projects__item__content__box_overlay_icons}>
                                                 <Link to={item.gitUrl}><BsCodeSlash className={cls.icon} /></Link>
-                                                <Link to={item.perviewUrl}><MdPreview  className={cls.icon} /></Link>
+                                                <Link to={item.previewUrl}><MdPreview  className={cls.icon} /></Link>
                                             </div>
                                         </div>
                                     </div>

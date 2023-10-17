@@ -11,7 +11,7 @@ export const getProjectsReq = createAsyncThunk<
   '/Projects/get_Projects',
   async (_,{ extra, rejectWithValue,dispatch }) => {
     try {
-        const response = await extra.api.get<IProject[]>('/Projects');
+        const response = await extra.api.get<IProject[]>('/projects');
         return response.data;
     } catch (e) {
       return rejectWithValue('Что-то пошло не так, попробуйте чуть позже');

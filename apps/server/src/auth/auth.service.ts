@@ -4,6 +4,7 @@ import { AuthDto } from './dto';
 import * as bcrypt from 'bcrypt';
 import { Tokens } from './dto/types';
 import { JwtService } from '@nestjs/jwt';
+// import { Role } from 'src/common/types';
 
 @Injectable()
 export class AuthService {
@@ -18,13 +19,12 @@ export class AuthService {
   //     data: {
   //       name: dto.name,
   //       email: dto.email,
-  //       phone: dto.phone,
   //       role: dto.role as Role,
   //       password: password,
   //     },
   //   });
-  //   const tokens = await this.createToken(newUser.id, newUser.email);
-  //   await this.updateHashedRt(newUser.id, tokens.refresh_token);
+  //   const tokens = await this.createToken(newUser.id, newUser.email, false);
+  //   await this.updateHashedRt(newUser.id, tokens.refreshToken);
   //   return {
   //     ...tokens,
   //     role: newUser.role,

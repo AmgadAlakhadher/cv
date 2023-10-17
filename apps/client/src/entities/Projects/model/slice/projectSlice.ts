@@ -15,7 +15,7 @@ const initialState: IProjectSchema = {
         desc: "",
         urlImg: "",
         gitUrl: "",
-        perviewUrl: "",
+        previewUrl: "",
         tags: []
     },
 }
@@ -41,7 +41,7 @@ const projectSlice = createSlice({
             state.project.gitUrl = payload;
         },
         setPerviewUrl:(state,{payload}:PayloadAction<string>) =>{
-            state.project.perviewUrl = payload;
+            state.project.previewUrl = payload;
         },
         setTags: (state,{payload}:PayloadAction) => {
             // state.project.tags = [...state.tags,payload];
@@ -53,7 +53,7 @@ const projectSlice = createSlice({
                 desc: "",
                 urlImg: "",
                 gitUrl: "",
-                perviewUrl: "",
+                previewUrl: "",
                 tags: []
             };
         },

@@ -14,7 +14,7 @@ export interface IProject_add{
     desc?: string;
     urlImg: string;
     gitUrl: string;
-    perviewUrl: string;
+    previewUrl: string;
     tags?: string[]
 }
 
