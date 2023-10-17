@@ -11,9 +11,11 @@ import { createReducerManager } from './reducerManager';
 import { rtkApi } from 'shared/api/rtkApi';
 import { OptionalRecord } from 'app/types/global';
 import { DarkModeSchema } from 'entities/DarkMode';
+import { SessionSchema } from 'entities/Session';
 
 export interface StateSchema {
   darkMode: DarkModeSchema;
+  session: SessionSchema,
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 }
 

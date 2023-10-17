@@ -13,6 +13,7 @@ import { createReducerManager } from './reducerManager';
 import { rtkApi } from 'shared/api/rtkApi';
 import { $api } from 'shared/api/api';
 import { NoInfer } from '@reduxjs/toolkit/dist/tsHelpers';
+import { sessionReducer } from '../../../../entities/Session';
 
 export function createReduxStore(
   initialState?: PreloadedState<CombinedState<NoInfer<StateSchema>>>,
@@ -21,6 +22,7 @@ export function createReduxStore(
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     darkMode: darkModeReducer,
+    session: sessionReducer,
     // last
     [rtkApi.reducerPath]: rtkApi.reducer,
   };
