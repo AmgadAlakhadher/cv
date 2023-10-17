@@ -12,10 +12,12 @@ import { rtkApi } from 'shared/api/rtkApi';
 import { OptionalRecord } from 'app/types/global';
 import { DarkModeSchema } from 'entities/DarkMode';
 import { SessionSchema } from 'entities/Session';
+import { IProjectSchema } from 'entities/Projects/model/types/projectTypes';
 
 export interface StateSchema {
   darkMode: DarkModeSchema;
-  session: SessionSchema,
+  session: SessionSchema;
+  project: IProjectSchema;
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 }
 

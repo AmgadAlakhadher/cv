@@ -1,1 +1,1 @@
-export { Projects } from './ui/Projects';
+export { Projects as ProjectsWidgets } from './ui/Projects';

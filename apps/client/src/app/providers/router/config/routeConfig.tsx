@@ -1,10 +1,12 @@
 import {ErrorPage} from 'pages/errorPage/';
 import { LoginPage } from 'pages/loginPage';
 import { MainPage } from 'pages/mainPage';
+import { ProjectsPage } from 'pages/projectsPage';
 import { 
   AppRoutes, 
   getRouteLogin, 
-  getRouteMain, 
+  getRouteMain,
+  getRouteProjects, 
 } from 'shared/consts/router';
 import { AppRoutesProps } from 'shared/types/router';
 
@@ -18,6 +20,11 @@ export const routesConfig: Record<AppRoutes, AppRoutesProps> = {
     authOnly: false,
     element: <LoginPage />,
     path: getRouteLogin(),
+  },
+  [AppRoutes.PROJECTS]: {
+    authOnly: true,
+    element: <ProjectsPage />,
+    path: getRouteProjects(),
   },
   // last
   [AppRoutes.NOTFOUND]: {

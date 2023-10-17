@@ -14,6 +14,7 @@ import { rtkApi } from 'shared/api/rtkApi';
 import { $api } from 'shared/api/api';
 import { NoInfer } from '@reduxjs/toolkit/dist/tsHelpers';
 import { sessionReducer } from '../../../../entities/Session';
+import { projectReducer } from '../../../../entities/Projects';
 
 export function createReduxStore(
   initialState?: PreloadedState<CombinedState<NoInfer<StateSchema>>>,
@@ -23,6 +24,7 @@ export function createReduxStore(
     ...asyncReducers,
     darkMode: darkModeReducer,
     session: sessionReducer,
+    project: projectReducer,
     // last
     [rtkApi.reducerPath]: rtkApi.reducer,
   };

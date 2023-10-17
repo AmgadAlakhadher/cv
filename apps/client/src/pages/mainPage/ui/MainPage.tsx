@@ -3,7 +3,7 @@ import { Contact } from 'widgets/Contact'
 import { Footer } from 'widgets/Footer'
 import { Header } from 'widgets/Header'
 import { HeroSection } from 'widgets/HeroSection'
-import { Projects } from 'widgets/Projects'
+import { ProjectsWidgets } from 'widgets/Projects'
 
 const MainPage = () => {
   return (
@@ -11,7 +11,7 @@ const MainPage = () => {
       <Header />
       <HeroSection />
       <About />
-      <Projects />
+      <ProjectsWidgets />
       <Contact />
       <Footer />
     </>
