@@ -27,9 +27,9 @@ export const Projects = () => {
             opacity: 1,
         },
     }
-    // const filteredProjects = projects.filter((project:IProject) => {
-    //     if(project.tag.includes(tag)) return project;
-    // });
+    const filteredProjects = projects.filter((project:IProject) => {
+        if(project.tags && project.tags.includes(tag)) return project;
+    });
 
     useEffect(()=> {
         dispatch(getProjectsReq());
@@ -59,7 +59,7 @@ export const Projects = () => {
             </div>
             <div className={`${cls.projects__items} row`} ref={ref}>
                 {
-                    projects.length ? projects.map((item:IProject, index) => {
+                    filteredProjects.length ? filteredProjects.map((item:IProject, index) => {
                         return (
                             <motion.div 
                                 key={item.id} className={`${cls.projects__item} col-lg-4 col-md-6 col-sm-12`}

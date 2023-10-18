@@ -26,19 +26,11 @@ model Project {
   urlImg  String?
   gitUrl  String?
   previewUrl String?
-  tags    Tag[]
+  tags    String?
+  
 }
 
-model Tag {
-  id    String @id @default(uuid())
-  name  String
-  projects Project[]
-}
 
 enum Role {
   ADMIN
-  MANAGER
-  WORKER
-  SELLER_ONLINE_STORE  
-  SELLER_MARKETPLACE
 }

@@ -15,13 +15,18 @@ export class ProjectService {
         gitUrl: dto.gitUrl,
         previewUrl: dto.previewUrl,
         urlImg: dto.urlImg,
-        // tags: dto.tags,
+        tags: JSON.stringify(dto.tags),
       },
     });
   }
 
   async findAll() {
-    return await this.prisma.project.findMany();
+    const projects = await this.prisma.project.findMany();
+    const mappedData = projects.map((project: any) => {
+      project.tags = JSON.parse(project.tags);
+      return project;
+    });
+    return mappedData;
   }
 
   async findOne(id: string) {
@@ -50,7 +55,12 @@ export class ProjectService {
         id,
       },
       data: {
-        ...dto,
+        title: dto.title,
+        desc: dto.desc,
+        gitUrl: dto.gitUrl,
+        previewUrl: dto.previewUrl,
+        urlImg: dto.urlImg,
+        tags: JSON.stringify(dto.tags),
       },
     });
     if (updateOne.count > 0)
