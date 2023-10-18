@@ -1,8 +1,9 @@
 import cls from './about.module.scss';
 import img from 'shared/assest/images/download.jpeg'
 import { useTranslation } from 'react-i18next';
-import {ConfigProvider, Image,Tabs} from 'antd';
+import {Image,Tabs} from 'antd';
 import type { TabsProps } from 'antd';
+import { motion } from 'framer-motion';
 
 export const About = () => {
   const [t] = useTranslation();
@@ -46,7 +47,15 @@ export const About = () => {
     <section className={cls.about} id='about'>
      <div className="myContainer">
       <div className="row">
-        <div className="col-lg-5 col-md-12">
+        <motion.div className="col-lg-5 col-md-12"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
             <div className={cls.about__content__left__box}>
                 <Image
                     className={cls.about__content__left__box_img}
@@ -55,8 +64,16 @@ export const About = () => {
                     alt="image_"
                     />
             </div>
-        </div>
-        <div className="col-lg-7 col-md-12">
+        </motion.div>
+        <motion.div className="col-lg-7 col-md-12"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01]
+          }}
+        >
           <div className={cls.about__content__right}>
                 <h3 className={cls.about__content__right_title}>
                     {t('about_title')}
@@ -72,8 +89,8 @@ export const About = () => {
                   className={cls.about__content__right_tabs}
                 />
             </div>
+        </motion.div>
         </div>
-      </div>
      </div>
     </section>
   )
